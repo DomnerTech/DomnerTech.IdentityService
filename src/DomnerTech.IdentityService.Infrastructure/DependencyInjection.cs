@@ -1,11 +1,11 @@
 ﻿using DomnerTech.IdentityService.Application;
+using DomnerTech.IdentityService.Application.Services;
 using DomnerTech.IdentityService.Infrastructure.Caching;
 using DomnerTech.IdentityService.Infrastructure.Persistence;
 using DomnerTech.IdentityService.Infrastructure.Repo;
 using DomnerTech.IdentityService.Infrastructure.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using Mobile.CleanArchProjectTemplate.Application.Services;
 
 namespace DomnerTech.IdentityService.Infrastructure;
 

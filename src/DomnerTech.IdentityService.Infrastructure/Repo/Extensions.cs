@@ -11,7 +11,7 @@ public static class Extensions
             s.FromAssemblies(AppDomain.CurrentDomain.GetAssemblies())
                 .AddClasses(c => c.AssignableTo<IBaseRepo>())
                 .AsImplementedInterfaces()
-                .WithSingletonLifetime());
+                .WithScopedLifetime());
         return services;
     }
 }

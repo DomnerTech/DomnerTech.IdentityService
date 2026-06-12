@@ -4,7 +4,10 @@ using DomnerTech.IdentityService.Application.DTOs;
 
 namespace DomnerTech.IdentityService.Application.Features.Users;
 
-public sealed record CreateUserCommand(string Username, int Age) :
-    IRequest<BaseResponse<bool>>,
+public sealed record CreateUserCommand(
+    string Username,
+    string Email,
+    string Password) :
+    IRequest<BaseResponse<Guid>>,
     ILogCreator, 
     IValidatableRequest;

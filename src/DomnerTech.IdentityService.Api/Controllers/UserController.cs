@@ -19,7 +19,7 @@ public sealed class UserController(ICommandQuery commandQuery) : BaseApiControll
     [HttpPost]
     public async Task<ActionResult<BaseResponse<bool>>> CreateUser([FromBody] CreateUserDto r)
     {
-        var result = await commandQuery.Send(new CreateUserCommand(r.Username, r.Age), HttpContext.RequestAborted);
+        var result = await commandQuery.Send(new CreateUserCommand(r.Username, r.Email, r.Password), HttpContext.RequestAborted);
         return result.ReturnJson();
     }
 }

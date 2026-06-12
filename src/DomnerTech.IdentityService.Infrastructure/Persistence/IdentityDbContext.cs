@@ -16,10 +16,10 @@ public sealed class IdentityDbContext(DbContextOptions<IdentityDbContext> option
 
     public DbSet<RolePermissionEntity> RolePermissions => Set<RolePermissionEntity>();
 
-    protected override void OnModelCreating(ModelBuilder builder)
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        builder.UseOpenIddict();
-
-        base.OnModelCreating(builder);
+        modelBuilder.ApplyConfigurationsFromAssembly(typeof(IdentityDbContext).Assembly);
+        modelBuilder.UseOpenIddict();
+        base.OnModelCreating(modelBuilder);
     }
 }

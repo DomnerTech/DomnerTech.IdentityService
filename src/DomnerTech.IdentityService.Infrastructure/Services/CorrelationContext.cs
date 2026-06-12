@@ -1,6 +1,6 @@
 ﻿using DomnerTech.IdentityService.Application.Constants;
+using DomnerTech.IdentityService.Application.Services;
 using Microsoft.AspNetCore.Http;
-using Mobile.CleanArchProjectTemplate.Application.Services;
 
 namespace DomnerTech.IdentityService.Infrastructure.Services;
 

@@ -1,5 +1,5 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-using Mobile.CleanArchProjectTemplate.Application.Services;
+﻿using DomnerTech.IdentityService.Application.Services;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace DomnerTech.IdentityService.Infrastructure.Services;
 
@@ -11,7 +11,7 @@ public static class Extensions
             s.FromAssemblies(AppDomain.CurrentDomain.GetAssemblies())
                 .AddClasses(c => c.AssignableTo<IBaseService>())
                 .AsImplementedInterfaces()
-                .WithSingletonLifetime());
+                .WithScopedLifetime());
         return services;
     }
 }

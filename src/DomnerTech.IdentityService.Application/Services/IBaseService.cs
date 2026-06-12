@@ -1,3 +1,3 @@
-﻿namespace Mobile.CleanArchProjectTemplate.Application.Services;
+﻿namespace DomnerTech.IdentityService.Application.Services;
 
 public interface IBaseService;
