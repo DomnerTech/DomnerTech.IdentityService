@@ -1,0 +1,29 @@
+services:
+
+  sqlserver:
+
+    image: mcr.microsoft.com/mssql/server:2025-latest
+
+    container_name: domnertech_sqlserver
+
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_SA_PASSWORD: "YourStrongPassword123!"
+
+    ports:
+      - "1433:1433"
+
+    volumes:
+      - sql_data:/var/opt/mssql
+
+  redis:
+
+    image: redis:7
+
+    container_name: domnertech_redis
+
+    ports:
+      - "6379:6379"
+
+volumes:
+  sql_data:

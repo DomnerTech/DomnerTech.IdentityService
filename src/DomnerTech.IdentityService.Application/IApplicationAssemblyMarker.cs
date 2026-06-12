@@ -1,0 +1,3 @@
+﻿namespace DomnerTech.IdentityService.Application;
+
+public interface IApplicationAssemblyMarker;
