@@ -76,6 +76,12 @@
         "Args": {
           "expression": "StartsWith(SourceContext, 'Microsoft.WebTools.BrowserLink')"
         }
+      },
+      {
+        "Name": "ByExcluding",
+        "Args": {
+          "expression": "StartsWith(SourceContext, 'Microsoft.EntityFrameworkCore')"
+        }
       }
     ],
     "Enrich": [

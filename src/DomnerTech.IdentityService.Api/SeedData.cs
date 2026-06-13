@@ -15,7 +15,7 @@ public static class SeedData
             return;
         var hasher = scope.ServiceProvider.GetRequiredService<IPasswordHasherService>();
         var admin = new UserEntity("admin", "admin@domnertech.com", hasher.Hash("Admin@123"));
-        db.Users.Add(admin);
+        await db.Users.AddAsync(admin);
         await db.SaveChangesAsync();
     }
 }

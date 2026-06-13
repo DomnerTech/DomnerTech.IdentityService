@@ -90,6 +90,7 @@ try
 
     app.MapHealthChecks("/healthz");
     app.MapControllers();
+    await SeedData.SeedAsync(app.Services);
     await app.RunAsync();
 
 }
